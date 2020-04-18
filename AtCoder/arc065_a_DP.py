@@ -1,4 +1,4 @@
-# 動的計画法
+# 動的計画法 (Dynamic Programming) での解法
 
 S = input()
 words = ['dream', 'dreamer', 'erase', 'eraser']
