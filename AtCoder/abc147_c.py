@@ -3,13 +3,13 @@
 
 N = int(input())
 
-As = []
+As = [[] for _ in range(N)]
 
 for i in range(N):
     n = int(input())
     for j in range(n):
         person, state = [int(k) for k in input().split()]
-        As.append([[person-1, state]])
+        As[i].append([person-1, state])
 
 honest = 0
 for i in range(2**N):
@@ -17,7 +17,6 @@ for i in range(2**N):
     for j in range(N):  # 人一人ごとにループを回す
         if (i >> j) & 1:   # 人jは正直と仮定
             for x, y in As[j]:
-                print(j >> x, j, x)
                 if (j >> x) & 1 != y:  # 人jは正直だが矛盾を発見
                     flag = 1
                     break
