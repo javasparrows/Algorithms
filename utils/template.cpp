@@ -46,9 +46,12 @@ typedef long long ll;
 #define MP make_pair //pairのコンストラクタ
 #define F first //pairの一つ目の要素
 #define S second　//pairの二つ目の要素
+
+#define UNIQUE(v) v.erase( unique(v.begin(), v.end()), v.end() );
+#define COUT(x) cout<<#x<<" = "<<(x)<<" (L"<<__LINE__<<")"<<endl
 // for DP
-template<class T> inline bool chmin(T& a, T b) {if (a>b) {a=b; return true;} return false}
-template<class T> inline bool chmax(T& a, T b) {if (a<b) {a=b; return true;} return false}
+template<class T> inline bool chmin(T& a, T b) {if (a>b) {a=b; return true;} return false;}
+template<class T> inline bool chmax(T& a, T b) {if (a<b) {a=b; return true;} return false;}
 
 signed main(){
 
